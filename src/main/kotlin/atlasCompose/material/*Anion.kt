@@ -30,7 +30,6 @@ private fun <T> void() {
     Card {  }
     Checkbox(false,{b: Boolean -> b })
     CircularProgressIndicator()
-    ContextMenu(false,{}){}
     Divider()
     DropdownMenu(false,{}){}
     DropdownMenuItem({}){}

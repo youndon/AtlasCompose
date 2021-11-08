@@ -9,7 +9,6 @@ import androidx.compose.runtime.Composable
 @Preview
 private fun void() {
     LocalAppWindow
-    NoOpUpdate
     Window { }
     DesktopMaterialTheme {  }
     DesktopTheme {  }

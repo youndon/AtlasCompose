@@ -1,83 +1,102 @@
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.desktop.Window
 import androidx.compose.desktop.ui.tooling.preview.Preview
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.ZeroCornerSize
+import androidx.compose.foundation.text.*
 import androidx.compose.material.*
-import androidx.compose.material.icons.materialIcon
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.remember
+import androidx.compose.material.TextFieldDefaults.BackgroundOpacity
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.outlined.AccountCircle
+import androidx.compose.material.icons.outlined.SupervisedUserCircle
+import androidx.compose.material.icons.outlined.VerifiedUser
+import androidx.compose.material.icons.rounded.Android
+import androidx.compose.material.icons.twotone.Image
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.Paint
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.input.key.Key.Companion.R
+import androidx.compose.ui.layout.layout
+import androidx.compose.ui.layout.layoutId
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.ExperimentalUnitApi
-import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.TextUnitType
+import androidx.compose.ui.text.input.*
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.window.Notification
-import kotlin.system.exitProcess
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Window
+import components.Texts
+import org.jetbrains.skija.impl.Log
+import java.net.URL
 
-@OptIn(ExperimentalUnitApi::class)
-@Preview
 @Composable
-fun land() {
-    Column {
-        Button(
-            onClick = {
-                println("clicked")
-            }, Modifier,
-            enabled = true,
-            interactionSource = remember { MutableInteractionSource() },
-            elevation = null,
-            shape = RoundedCornerShape(10.dp),
-            border = BorderStroke(5.dp, Color(6464631)),
-            colors = ButtonDefaults.buttonColors(Color.Blue, Color.White),
-            contentPadding = ButtonDefaults.ContentPadding
-        ) {
-            Column {
-                Text("NeverLand")
-            }
-        }
-        Spacer(Modifier.height(10.dp))
-       TextButton({
-                  println("text button!!")
-       },
-           colors = ButtonDefaults.buttonColors(Color.White,Color.Gray),
-       ){
-           Text("Live Each day as It Your Last.") }
-       RadioButton(onClick = {
+fun login() {
+    Column(modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally) {
 
-        },modifier = Modifier,
-           enabled =  true,
-            interactionSource = remember { MutableInteractionSource() },
-            selected = false,
-            colors = RadioButtonDefaults.colors(Color.White,Color.Blue)
+
+        // text.
+        Text(
+            "Login User",
+            modifier = Modifier
+                .padding(20.dp),
+            style = TextStyle(
+                color = Color.DarkGray,
+                fontSize = 25.sp
+            )
         )
-        OutlinedButton({},modifier = Modifier,
-        enabled = true,
-        interactionSource = remember { MutableInteractionSource() },
-        elevation = null,
-        shape = MaterialTheme.shapes.medium,
-        border = ButtonDefaults.outlinedBorder,
-        colors = ButtonDefaults.buttonColors(Color.DarkGray, Color.LightGray),
-        contentPadding = ButtonDefaults.ContentPadding)
-        {
-            Text("OutLine!")
+
+        field(tx = "Inter User Name.",lab = "Username.",iv = Icons.Filled.SupervisedUserCircle)
+
+        field(tx = "Inter Your Pass.",lab = "Password.",
+            iv = Icons.Filled.Password, vt = PasswordVisualTransformation())
+
+        Button(onClick = {
+
+        }, modifier = Modifier){
+            Text("Login")
         }
     }
+
+
+}
+
+@Preview
+@Composable
+fun primarily() {
+    login()
 }
 
 fun main() = Window {
-    land()
+    primarily()
+}
+
+
+
+@Composable
+fun field(tx:String = "",
+          vt: VisualTransformation= VisualTransformation.None,
+          iv:ImageVector=Icons.Filled.Android,
+            lab :String ="") {
+    val rem = remember { mutableStateOf("") }
+    TextField(value = rem.value,
+        modifier = Modifier.padding(20.dp),
+        onValueChange = { rem.value = it },
+        label = { Text(lab) },
+        leadingIcon = { Icon(iv, null) },
+        placeholder = {Text(tx)},
+        visualTransformation = vt
+    )
 }

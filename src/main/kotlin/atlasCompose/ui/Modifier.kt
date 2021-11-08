@@ -20,6 +20,7 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.unit.dp
 
 private interface Modifier {
     @OptIn(ExperimentalComposeUiApi::class, androidx.compose.material.ExperimentalMaterialApi::class)
@@ -38,7 +39,7 @@ private interface Modifier {
             this.fillMaxHeight()
             this.fillMaxSize()
             this.fillMaxWidth()
-//        this.height()
+        this.height(1.dp)
             this.heightIn()
 //        this.offset {  }
             this.padding()
@@ -50,9 +51,9 @@ private interface Modifier {
             this.requiredSizeIn()
 //        this.requiredWidth()
             this.requiredWidthIn()
-//        this.size()
+        this.size(1.dp)
             this.sizeIn()
-//        this.width()
+        this.width(1.dp)
             this.widthIn()
             this.wrapContentHeight()
             this.wrapContentSize()
