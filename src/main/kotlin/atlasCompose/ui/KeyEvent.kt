@@ -2,7 +2,6 @@ package atlasCompose.ui
 
 import androidx.compose.foundation.text.isTypedEvent
 import androidx.compose.ui.input.key.*
-import androidx.compose.ui.input.key.KeyEvent
 
 private class KeyEvent {
     val KeyEvent.ss: Any

@@ -1,11 +1,9 @@
 package atlasCompose.ui
 
-import androidx.compose.runtime.MonotonicFrameClock
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.input.key.Key
 import androidx.compose.ui.input.key.nativeKeyCode
 import androidx.compose.ui.input.key.nativeKeyLocation
-import androidx.compose.ui.platform.InfiniteAnimationPolicy
 
 @OptIn(ExperimentalComposeUiApi::class)
 private class Key {

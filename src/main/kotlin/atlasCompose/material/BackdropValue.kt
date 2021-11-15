@@ -1,7 +1,5 @@
 package atlasCompose.material
 
-import androidx.compose.material.BackdropValue
-
 private enum class BackdropValue {
 
     /**

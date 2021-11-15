@@ -1,7 +1,6 @@
 package atlasCompose.ui
 
 import androidx.compose.ui.semantics.*
-import androidx.compose.ui.semantics.SemanticsPropertyReceiver
 
 private interface SemanticsPropertyReceiver {
     val SemanticsPropertyReceiver.ss: Any

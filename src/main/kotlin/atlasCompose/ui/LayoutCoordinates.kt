@@ -1,7 +1,6 @@
 package atlasCompose.ui
 
 import androidx.compose.ui.layout.*
-import androidx.compose.ui.layout.LayoutCoordinates
 
 private interface LayoutCoordinates {
     val LayoutCoordinates.ss: Any

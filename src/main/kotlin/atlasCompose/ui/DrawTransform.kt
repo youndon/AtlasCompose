@@ -2,8 +2,6 @@ package atlasCompose.ui
 
 import androidx.compose.ui.graphics.drawscope.DrawTransform
 import androidx.compose.ui.graphics.drawscope.inset
-import androidx.compose.ui.graphics.drawscope.rotateRad
-import androidx.compose.ui.graphics.drawscope.scale
 
 private interface DrawTransform {
     val DrawTransform.ss: Any

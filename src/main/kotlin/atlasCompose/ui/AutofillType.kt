@@ -1,7 +1,5 @@
 package atlasCompose.ui
 
-import androidx.compose.ui.autofill.AutofillType
-
 private enum class AutofillType {
 
     /**

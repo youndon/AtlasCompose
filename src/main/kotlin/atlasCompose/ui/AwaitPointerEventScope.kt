@@ -1,8 +1,6 @@
 package atlasCompose.ui
 
-import androidx.compose.foundation.gestures.*
 import androidx.compose.ui.input.pointer.AwaitPointerEventScope
-import kotlinx.coroutines.runBlocking
 
 private interface AwaitPointerEventScope {
     val AwaitPointerEventScope.ss: Any

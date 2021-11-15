@@ -3,7 +3,6 @@ package atlasCompose.ui
 import androidx.compose.ui.layout.ScaleFactor
 import androidx.compose.ui.layout.isSpecified
 import androidx.compose.ui.layout.isUnspecified
-import androidx.compose.ui.layout.takeOrElse
 
 private class ScaleFactor {
     val ScaleFactor.ss: Any

@@ -1,6 +1,5 @@
 package atlasCompose.ui
 
-import androidx.compose.runtime.Stable
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.toSkijaRect
 

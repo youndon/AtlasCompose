@@ -1,7 +1,5 @@
 package atlasCompose.material
 
-import androidx.compose.material.SnackbarDuration
-
 private enum class SnackbarDuration {
 
     /**

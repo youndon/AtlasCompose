@@ -2,7 +2,6 @@ package atlasCompose.ui
 
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathOperation
-import androidx.compose.ui.graphics.addOutline
 import androidx.compose.ui.graphics.asDesktopPath
 
 

@@ -3,7 +3,6 @@ package atlasCompose.ui
 import androidx.compose.animation.core.VectorConverter
 import androidx.compose.animation.core.VisibilityThreshold
 import androidx.compose.ui.geometry.*
-import androidx.compose.ui.geometry.Size
 
 private class Size {
     init {

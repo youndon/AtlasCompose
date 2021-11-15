@@ -1,7 +1,5 @@
 package atlasCompose.ui
 
-import androidx.compose.ui.unit.LayoutDirection
-
 private enum class LayoutDirection {
 
     /**
