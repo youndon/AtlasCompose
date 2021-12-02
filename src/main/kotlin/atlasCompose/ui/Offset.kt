@@ -1,7 +1,9 @@
 package atlasCompose.ui
 
-import androidx.compose.ui.geometry.*
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.isFinite
+import androidx.compose.ui.geometry.isSpecified
+import androidx.compose.ui.geometry.isUnspecified
 import androidx.compose.ui.unit.round
 
 private class Offset {

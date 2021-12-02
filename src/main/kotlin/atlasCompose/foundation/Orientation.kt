@@ -1,6 +1,5 @@
 package compose.foundation
 
-import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.draggable
 import androidx.compose.foundation.gestures.scrollable
 

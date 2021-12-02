@@ -21,6 +21,7 @@ dependencies {
     implementation(compose.runtime)
     implementation(compose.uiTooling)
     implementation(compose.materialIconsExtended)
+    implementation(kotlin("script-runtime"))
 }
 
 tasks.withType<KotlinCompile>() {

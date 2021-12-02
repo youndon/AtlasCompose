@@ -1,8 +1,10 @@
 package atlasCompose.desktop
 
-import androidx.compose.desktop.*
+import androidx.compose.desktop.DesktopMaterialTheme
+import androidx.compose.desktop.DesktopTheme
+import androidx.compose.desktop.LocalAppWindow
+import androidx.compose.desktop.Window
 import androidx.compose.desktop.ui.tooling.preview.Preview
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 @Composable

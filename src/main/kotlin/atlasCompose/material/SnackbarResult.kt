@@ -1,7 +1,6 @@
 package atlasCompose.material
 
 import androidx.compose.material.Snackbar
-import androidx.compose.material.SnackbarResult
 
 private enum class SnackbarResult {
     /**

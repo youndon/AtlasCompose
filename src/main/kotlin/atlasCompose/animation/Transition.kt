@@ -1,7 +1,6 @@
 package compose.animation
 
-import androidx.compose.animation.animateColor
-import androidx.compose.animation.core.*
+import androidx.compose.animation.core.InternalAnimationApi
 import androidx.compose.animation.core.Transition
 
 private class Transition {

@@ -1,45 +1,29 @@
-import androidx.compose.animation.AnimatedVisibility
+
 import androidx.compose.desktop.Window
 import androidx.compose.desktop.ui.tooling.preview.Preview
-import androidx.compose.foundation.*
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.shape.ZeroCornerSize
-import androidx.compose.foundation.text.*
-import androidx.compose.material.*
-import androidx.compose.material.TextFieldDefaults.BackgroundOpacity
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Button
+import androidx.compose.material.Icon
+import androidx.compose.material.Text
+import androidx.compose.material.TextField
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material.icons.outlined.AccountCircle
-import androidx.compose.material.icons.outlined.SupervisedUserCircle
-import androidx.compose.material.icons.outlined.VerifiedUser
-import androidx.compose.material.icons.rounded.Android
-import androidx.compose.material.icons.twotone.Image
-import androidx.compose.runtime.*
+import androidx.compose.material.icons.filled.Android
+import androidx.compose.material.icons.filled.Password
+import androidx.compose.material.icons.filled.SupervisedUserCircle
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.composed
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.input.key.Key.Companion.R
-import androidx.compose.ui.layout.layout
-import androidx.compose.ui.layout.layoutId
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.input.*
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.DpOffset
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.window.Window
-import components.Texts
-import org.jetbrains.skija.impl.Log
-import java.net.URL
 
 @Composable
 fun login() {
@@ -99,4 +83,5 @@ fun field(tx:String = "",
         placeholder = {Text(tx)},
         visualTransformation = vt
     )
+
 }

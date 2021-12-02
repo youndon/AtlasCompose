@@ -1,7 +1,5 @@
 package compose.foundation
 
-import androidx.compose.foundation.MutatePriority
-
 private enum class MutatePriority {
 
     /**

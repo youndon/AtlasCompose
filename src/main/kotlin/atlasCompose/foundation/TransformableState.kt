@@ -1,6 +1,5 @@
 package compose.foundation
 
-import androidx.compose.foundation.gestures.*
 import androidx.compose.foundation.gestures.TransformableState
 
 private interface TransformableState {

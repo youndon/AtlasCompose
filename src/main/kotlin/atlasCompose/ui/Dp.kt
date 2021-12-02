@@ -2,9 +2,10 @@ package atlasCompose.ui
 
 import androidx.compose.animation.core.VectorConverter
 import androidx.compose.animation.core.VisibilityThreshold
-import androidx.compose.ui.unit.*
 import androidx.compose.ui.unit.Dp
-import kotlin.ranges.coerceAtLeast
+import androidx.compose.ui.unit.isFinite
+import androidx.compose.ui.unit.isSpecified
+import androidx.compose.ui.unit.isUnspecified
 
 private class Dp {
     val Dp.ss: Any

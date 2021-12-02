@@ -1,5 +1,4 @@
 package atlasCompose.ui
-import androidx.compose.foundation.Canvas
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.text.Paragraph
 

@@ -5,24 +5,27 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.geometry.*
 import androidx.compose.ui.graphics.*
-import androidx.compose.ui.graphics.LinearGradientShader
 import androidx.compose.ui.graphics.vector.*
-import androidx.compose.ui.input.key.*
-import androidx.compose.ui.layout.*
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.layout.FirstBaseline
+import androidx.compose.ui.layout.LastBaseline
+import androidx.compose.ui.layout.ScaleFactor
 import androidx.compose.ui.platform.*
-import androidx.compose.ui.res.*
+import androidx.compose.ui.res.loadSvgPainter
+import androidx.compose.ui.res.loadXmlImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.text.*
-import androidx.compose.ui.text.font.*
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.platform.Typeface
 import androidx.compose.ui.unit.*
 import androidx.compose.ui.window.*
-import androidx.compose.ui.window.WindowPosition
-import androidx.compose.ui.window.v1.*
+import androidx.compose.ui.window.v1.KeyStroke
+import androidx.compose.ui.window.v1.Tray
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.skija.Typeface
 import org.xml.sax.InputSource
-import java.awt.Window
 import java.io.InputStream
 
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalUnitApi::class)
@@ -106,11 +109,12 @@ private fun void() {
     NoInspectorInfo
     isDebugInspectorInfoEnabled
     debugInspectorInfo {  }
-    imageResource("")
-    loadSvgResource(InputStream.nullInputStream(), Density(1f))
-    loadVectorXmlResource(InputSource(), Density(1f))
-    svgResource("")
-    vectorXmlResource("")
+    painterResource("")
+    loadSvgPainter(InputStream.nullInputStream(), Density(1f))
+    InputSource()
+    loadXmlImageVector(InputSource(""), Density(1f))
+    painterResource("")
+    painterResource("")
     ToggleableState(false)
     AnnotatedString("")
 //    Paragraph() // FIXME: 16/07/2021

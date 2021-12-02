@@ -1,6 +1,5 @@
 package atlasCompose.ui
 
-import androidx.compose.ui.input.pointer.PointerEvent
 import androidx.compose.ui.input.pointer.PointerInputFilter
 
 private abstract class PointerInputFilter {

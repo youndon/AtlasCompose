@@ -1,6 +1,5 @@
 package atlasCompose.runtime
 
-import androidx.compose.runtime.MonotonicFrameClock
 import androidx.compose.runtime.PausableMonotonicFrameClock
 
 private interface PausableMonotonicFrameClock {

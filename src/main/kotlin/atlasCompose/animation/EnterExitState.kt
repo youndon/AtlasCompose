@@ -1,8 +1,5 @@
 package compose.animation
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.EnterExitState
-
 private enum class EnterExitState {
 
     PreEnter,  // The initial state of a custom enter animation in [AnimatedVisibility]..

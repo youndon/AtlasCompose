@@ -1,6 +1,5 @@
 package atlasCompose.material
 
-import androidx.compose.material.BottomSheetState
 import androidx.compose.material.ExperimentalMaterialApi
 
 @OptIn(ExperimentalMaterialApi::class)

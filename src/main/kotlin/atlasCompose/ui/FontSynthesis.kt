@@ -1,8 +1,6 @@
 package atlasCompose.ui
 
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontSynthesis
-import androidx.compose.ui.text.platform.Font
 
 private enum class FontSynthesis {
 

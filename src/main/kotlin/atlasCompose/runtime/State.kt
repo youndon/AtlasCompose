@@ -2,7 +2,6 @@ package atlasCompose.runtime
 
 import androidx.compose.runtime.MonotonicFrameClock
 import androidx.compose.runtime.Recomposer
-import androidx.compose.runtime.State
 import kotlinx.coroutines.cancel
 
 private enum class State {

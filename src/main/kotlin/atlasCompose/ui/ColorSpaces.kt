@@ -1,7 +1,6 @@
 package atlasCompose.ui
 
 import androidx.compose.ui.graphics.colorspace.ColorSpaces
-import androidx.compose.ui.graphics.colorspace.TransferParameters
 
 private object ColorSpaces {
     init {

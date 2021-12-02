@@ -1,8 +1,10 @@
 package atlasCompose.material
 
 import androidx.compose.material.*
-import androidx.compose.material.icons.*
-import androidx.compose.material.ripple.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.materialIcon
+import androidx.compose.material.ripple.LocalRippleTheme
+import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector

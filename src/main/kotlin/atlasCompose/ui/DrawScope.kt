@@ -1,8 +1,9 @@
 package atlasCompose.ui
 
-import androidx.compose.ui.graphics.drawOutline
-import androidx.compose.ui.graphics.drawscope.*
 import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.drawscope.clipRect
+import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
+import androidx.compose.ui.graphics.drawscope.inset
 
 private interface DrawScope {
     val DrawScope.ss: Any

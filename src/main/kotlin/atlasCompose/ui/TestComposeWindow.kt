@@ -1,6 +1,5 @@
 package atlasCompose.ui
 
-import androidx.compose.ui.input.mouse.MouseScrollEvent
 import androidx.compose.ui.platform.TestComposeWindow
 
 private class TestComposeWindow {
