@@ -20,6 +20,7 @@ dependencies {
     implementation(compose.desktop.currentOs)
     implementation(compose.uiTooling)
     implementation(compose.materialIconsExtended)
+    implementation(kotlin("script-runtime"))
 }
 
 tasks.withType<KotlinCompile>() {

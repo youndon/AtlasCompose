@@ -11,7 +11,9 @@ import androidx.compose.ui.layout.FirstBaseline
 import androidx.compose.ui.layout.LastBaseline
 import androidx.compose.ui.layout.ScaleFactor
 import androidx.compose.ui.platform.*
-import androidx.compose.ui.res.*
+import androidx.compose.ui.res.loadSvgPainter
+import androidx.compose.ui.res.loadXmlImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.text.*
 import androidx.compose.ui.text.font.Font
@@ -107,11 +109,12 @@ private fun void() {
     NoInspectorInfo
     isDebugInspectorInfoEnabled
     debugInspectorInfo {  }
-    imageResource("")
-    loadSvgResource(InputStream.nullInputStream(), Density(1f))
-    loadVectorXmlResource(InputSource(), Density(1f))
-    svgResource("")
-    vectorXmlResource("")
+    painterResource("")
+    loadSvgPainter(InputStream.nullInputStream(), Density(1f))
+    InputSource()
+    loadXmlImageVector(InputSource(""), Density(1f))
+    painterResource("")
+    painterResource("")
     ToggleableState(false)
     AnnotatedString("")
 //    Paragraph() // FIXME: 16/07/2021

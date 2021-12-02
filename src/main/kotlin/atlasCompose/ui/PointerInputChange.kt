@@ -1,6 +1,7 @@
 package atlasCompose.ui
 
 import androidx.compose.ui.input.pointer.*
+import androidx.compose.ui.input.pointer.PointerInputChange
 import androidx.compose.ui.unit.IntSize
 
 private class PointerInputChange {

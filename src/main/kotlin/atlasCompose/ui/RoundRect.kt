@@ -1,6 +1,7 @@
 package atlasCompose.ui
 
 import androidx.compose.ui.geometry.*
+import androidx.compose.ui.geometry.RoundRect
 import androidx.compose.ui.graphics.toSkijaRRect
 
 private class RoundRect {
