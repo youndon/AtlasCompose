@@ -30,7 +30,6 @@ fun login() {
     Column(modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally) {
 
-
         // text.
         Text(
             "Login User",
@@ -66,8 +65,6 @@ fun primarily() {
 fun main() = Window {
     primarily()
 }
-
-
 
 @Composable
 fun field(tx:String = "",
