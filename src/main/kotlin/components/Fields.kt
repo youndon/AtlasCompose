@@ -16,9 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.VisualTransformation
 
 object Fields {
-    @Composable
-    fun fs() {
+    @Composable fun fs() {
         val rem = remember { mutableStateOf("") }
+        //
         TextField(
             value = rem.value,
             onValueChange = { rem.value = it },
@@ -63,10 +63,11 @@ object Fields {
                     disabledPlaceholderColor = MaterialTheme.colors.onSurface.copy(ContentAlpha.disabled)
                 )
         )
+        //
         BasicTextField(value = rem.value,
             onValueChange = {rem.value = it},
         )
-
+        //
         OutlinedTextField("out line field", {})
 
     }

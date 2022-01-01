@@ -1,6 +1,7 @@
 package compose.desktop
 
-import androidx.compose.desktop.ComposeDialog
+import androidx.compose.ui.awt.ComposeDialog
+
 
 private class ComposeDialog {
     init {

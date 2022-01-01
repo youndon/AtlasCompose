@@ -1,6 +1,7 @@
 package compose.desktop
 
-import androidx.compose.desktop.ComposeWindow
+import androidx.compose.ui.awt.ComposeWindow
+
 
 private class ComposeWindow {
     init {

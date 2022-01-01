@@ -7,9 +7,6 @@ plugins {
     id("org.jetbrains.compose") version "1.0.0-alpha3"
 }
 
-group = "me.yon"
-version = "1.0"
-
 repositories {
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
@@ -38,4 +35,3 @@ compose.desktop {
         }
     }
 }
-

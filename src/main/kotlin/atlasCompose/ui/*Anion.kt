@@ -11,9 +11,7 @@ import androidx.compose.ui.layout.FirstBaseline
 import androidx.compose.ui.layout.LastBaseline
 import androidx.compose.ui.layout.ScaleFactor
 import androidx.compose.ui.platform.*
-import androidx.compose.ui.res.loadSvgPainter
-import androidx.compose.ui.res.loadXmlImageVector
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.*
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.text.*
 import androidx.compose.ui.text.font.Font
@@ -52,7 +50,7 @@ private fun void() {
     ShaderBrush(Shader(1))
     SweepGradientShader(Offset.Zero, listOf())
     TransformOrigin(1f,1f)
-    imageFromResource("")
+    useResource("") { loadImageBitmap(it) }
 //    NativeCanvas // typealias of org.jetbrains.skija.Canvas
 //    NativePaint // typealias if org.jetbrains.skija.Paint
 //    NativeColorFilter // typealias of  SkijaColorFilter
@@ -145,7 +143,7 @@ private fun void() {
     Popup {  }
     Tray()
     Window()
-    WindowDraggableArea {  }
+    WindowDraggableArea { }
     WindowPosition(Dp.Hairline, Dp.Hairline)
     WindowSize(Dp.Hairline, Dp.Hairline)
     application {  }

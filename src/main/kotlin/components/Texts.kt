@@ -1,5 +1,6 @@
 package components
 
+import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.*
 import androidx.compose.material.Text
@@ -13,9 +14,9 @@ import androidx.compose.ui.text.style.*
 import androidx.compose.ui.unit.*
 
 object Texts {
-    @Composable
-    fun ts(s:String ) {
+    @Composable fun ts(s:String ) {
         Column(Modifier.padding(20.dp)) {
+            //
             ClickableText(
                 AnnotatedString(s),
                 Modifier
@@ -27,6 +28,7 @@ object Texts {
             ) {
 
             }
+            //
             Text(text = s,
                 Modifier.fillMaxWidth(),
                 overflow = TextOverflow.Ellipsis,
@@ -36,6 +38,7 @@ object Texts {
                 style = myStyle(),
                 textAlign = TextAlign.Center
             )
+            //
             BasicText(
                 text = AnnotatedString(s),
                 style = myStyle()
@@ -63,5 +66,4 @@ object Texts {
         lineHeight = 30.sp,
         textIndent = TextIndent()
     )
-
 }

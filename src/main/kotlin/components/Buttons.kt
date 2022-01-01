@@ -13,9 +13,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 object Buttons {
-    @Composable
-    fun bs() {
+    @Composable fun bs() {
         Column {
+            //
             Button(
                 onClick = {
 
@@ -31,12 +31,14 @@ object Buttons {
                 Text("NeverLand")
             }
             Spacer(Modifier.height(10.dp))
+            //
             TextButton({
                 println("text button!!")
             },
                 colors = ButtonDefaults.buttonColors(Color.White, Color.Gray),
             ){
                 Text("Live Each day as It Your Last.") }
+            //
             RadioButton(onClick = {
 
             },modifier = Modifier,
@@ -44,6 +46,7 @@ object Buttons {
                 selected = true,
                 colors = RadioButtonDefaults.colors(Color.White,Color.Blue),
             )
+            //
             OutlinedButton({},modifier = Modifier,
                 colors = ButtonDefaults.buttonColors(Color.DarkGray, Color.LightGray),
                 contentPadding = ButtonDefaults.ContentPadding)
@@ -51,20 +54,24 @@ object Buttons {
                 Text("OutLine!")
             }
             Spacer(Modifier.height(10.dp))
+            //
             IconButton(onClick = {}){
 
             }
+            //
             IconToggleButton(
                 checked = true,
                 onCheckedChange = {},
                 Modifier,){
                 Text("toggle")
             }
+            //
             FloatingActionButton({
 
             }){
                 Text("+")
             }
+            //
             ExtendedFloatingActionButton({},{})
         }
     }

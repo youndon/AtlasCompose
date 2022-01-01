@@ -21,8 +21,7 @@ import androidx.compose.ui.unit.dp
 
 object Boxes {
     @OptIn(ExperimentalMaterialApi::class, ExperimentalComposeUiApi::class)
-    @Composable
-    fun bx() {
+    @Composable fun bx() {
         var count by remember { mutableStateOf(0) }
         Column {
             //
