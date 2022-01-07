@@ -30,8 +30,8 @@ private fun <T> void() {
     shrinkOut()
     shrinkHorizontally()
     shrinkVertically()
-    slideIn({ IntOffset.Zero })
-    slideOut({ IntOffset.Zero })
+    slideIn(){ IntOffset.Zero}
+    slideOut(){ IntOffset.Zero }
     slideInHorizontally()
     slideInVertically()
     slideOutHorizontally()

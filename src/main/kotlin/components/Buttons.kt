@@ -12,7 +12,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
-object Buttons {
+interface Buttons {
     @Composable fun bs() {
         Column {
             //

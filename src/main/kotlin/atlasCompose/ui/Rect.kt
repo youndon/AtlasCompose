@@ -1,7 +1,6 @@
 package atlasCompose.ui
 
 import androidx.compose.ui.geometry.Rect
-import androidx.compose.ui.graphics.toSkijaRect
 
 private class Rect {
     val Rect.ss: Any
@@ -48,6 +47,5 @@ private class Rect {
 //       this.intersect()
 //       this.overlaps()
 //       this.translate()
-            this.toSkijaRect()
         }
 }

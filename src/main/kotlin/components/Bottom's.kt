@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 
-object `Bottom's` {
+interface `Bottom's` {
     @OptIn(ExperimentalMaterialApi::class)
     @Composable
     fun bottoms() {

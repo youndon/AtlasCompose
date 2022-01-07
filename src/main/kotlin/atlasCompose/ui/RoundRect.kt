@@ -2,7 +2,7 @@ package atlasCompose.ui
 
 import androidx.compose.ui.geometry.*
 import androidx.compose.ui.geometry.RoundRect
-import androidx.compose.ui.graphics.toSkijaRRect
+import androidx.compose.ui.graphics.toSkiaRRect
 
 private class RoundRect {
     val RoundRect.ss: Any
@@ -41,6 +41,6 @@ private class RoundRect {
             this.minDimension
             this.safeInnerRect
             this.translate(Offset.Zero)
-            this.toSkijaRRect()
+            this.toSkiaRRect()
         }
 }

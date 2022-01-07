@@ -22,14 +22,19 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.mouse.MouseScrollOrientation
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.DpOffset
+import androidx.compose.ui.unit.dp
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun void() {
 
     LocalIndication
     LocalScrollbarStyle
     BorderStroke(Dp(1f), Color.Blue)
-    BoxWithTooltip(tooltip = {},content = {})
+    TooltipArea(tooltip = {}, tooltipPlacement = TooltipPlacement.CursorPoint(
+        offset = DpOffset(0.dp, 16.dp)
+    ), content = {})
 //    Canvas() // FIXME: 15/07/2021
     HorizontalScrollbar(adapter = ScrollbarAdapter(ScrollState(1)))
 //    Image() // FIXME: 15/07/2021
@@ -41,7 +46,6 @@ private fun void() {
     DraggableState {  }
     ScrollableState { fl: Float -> fl }
     TransformableState { zoomChange: Float, panChange: Offset, rotationChange: Float -> }
-    isOrientationMatches(Orientation.Horizontal,MouseScrollOrientation.Horizontal)
     rememberDraggableState {  }
     rememberScrollableState { fl: Float -> fl }
     rememberTransformableState {zoomChange: Float, panChange: Offset, rotationChange: Float ->  }
@@ -71,5 +75,4 @@ private fun void() {
     DisableSelection {  }
     SelectionContainer {  }
     DisableSelection {  }
-
 }

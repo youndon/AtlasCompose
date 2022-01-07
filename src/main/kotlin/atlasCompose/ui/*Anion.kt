@@ -1,10 +1,10 @@
 package atlasCompose.ui
 
-import androidx.compose.desktop.Window
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.geometry.*
 import androidx.compose.ui.graphics.*
+import androidx.compose.ui.graphics.Shader
 import androidx.compose.ui.graphics.vector.*
 import androidx.compose.ui.input.key.Key
 import androidx.compose.ui.layout.FirstBaseline
@@ -19,10 +19,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.platform.Typeface
 import androidx.compose.ui.unit.*
 import androidx.compose.ui.window.*
-import androidx.compose.ui.window.v1.KeyStroke
-import androidx.compose.ui.window.v1.Tray
 import kotlinx.coroutines.runBlocking
-import org.jetbrains.skija.Typeface
 import org.xml.sax.InputSource
 import java.io.InputStream
 
@@ -47,7 +44,7 @@ private fun void() {
     Paint()
     PathMeasure()
     RadialGradientShader(Offset.Zero,1f, listOf())
-    ShaderBrush(Shader(1))
+    ShaderBrush(Shader.makeEmpty())
     SweepGradientShader(Offset.Zero, listOf())
     TransformOrigin(1f,1f)
     useResource("") { loadImageBitmap(it) }
@@ -126,7 +123,7 @@ private fun void() {
     resolveDefaults(TextStyle.Default,LayoutDirection.Ltr)
     FontFamily()
     Font(1)
-    Typeface(Typeface.makeDefault(),"")
+    Typeface(org.jetbrains.skia.Typeface.makeDefault(),"")
     Constraints()
     Density(1f,1f)
     DpOffset(Dp.Hairline, Dp.Hairline)
@@ -141,11 +138,10 @@ private fun void() {
 //    AwtWindow() // FIXME: 16/07/2021
 //    Dialog() // FIXME: 16/07/2021
     Popup {  }
-    Tray()
-    Window()
-    WindowDraggableArea { }
+    TrayState()
+    Window({}){}
     WindowPosition(Dp.Hairline, Dp.Hairline)
-    WindowSize(Dp.Hairline, Dp.Hairline)
+    DpSize(Dp.Hairline, Dp.Hairline)
     application {  }
     runBlocking {
         awaitApplication {  }
@@ -153,5 +149,4 @@ private fun void() {
     rememberDialogState()
     rememberTrayState()
     rememberWindowState()
-    KeyStroke(Key.A)
 }
