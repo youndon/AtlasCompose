@@ -15,7 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.VisualTransformation
 
-interface Fields {
+interface `Field's` {
     @Composable fun fs() {
         val rem = remember { mutableStateOf("") }
         //

@@ -1,5 +1,6 @@
 package components
 
+import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.material.*
 import androidx.compose.material.SnackbarDefaults.backgroundColor
 import androidx.compose.runtime.Composable

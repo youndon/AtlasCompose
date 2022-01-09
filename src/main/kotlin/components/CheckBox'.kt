@@ -10,7 +10,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.state.ToggleableState
 
-interface CheckBox {
+interface `CheckBox'` {
     @Composable fun checkBox() {
         Checkbox(
             checked = true,

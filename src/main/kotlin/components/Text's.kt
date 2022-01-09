@@ -13,7 +13,7 @@ import androidx.compose.ui.text.intl.LocaleList
 import androidx.compose.ui.text.style.*
 import androidx.compose.ui.unit.*
 
-interface Texts {
+interface `Text's` {
     @Composable fun ts(s:String ) {
         Column(Modifier.padding(20.dp)) {
             //
