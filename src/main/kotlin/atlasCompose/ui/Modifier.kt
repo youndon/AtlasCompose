@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 private interface Modifier {
     @OptIn(ExperimentalComposeUiApi::class, androidx.compose.material.ExperimentalMaterialApi::class)
     val Modifier.ss: Any
-        get() = this.apply {
+        get() = with(this) {
 //        this.all {  }
 //        this.then()
 //        this.zIndex()
