@@ -1,15 +1,20 @@
 package components
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.BadgedBox
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
-interface `Column&Row'` {
+interface `CRB'` {
     @Composable
     fun some() {
+        //
         Column(
             modifier = Modifier,
             verticalArrangement = Arrangement.Top,
@@ -21,6 +26,7 @@ interface `Column&Row'` {
         ) {
 
         }
+        //
         Row(
             modifier = Modifier,
             horizontalArrangement = Arrangement.Start,
@@ -28,5 +34,26 @@ interface `Column&Row'` {
         ) {
 
         }
+        //
+        Box(
+            modifier = Modifier,
+            contentAlignment = Alignment.Center,
+            propagateMinConstraints = false
+        ) {
+        }
+        //
+        BoxWithConstraints(
+            modifier = Modifier,
+        contentAlignment = Alignment.TopStart,
+        propagateMinConstraints = false,
+        ) {
+        }
+        //
+        BadgedBox(
+            badge = @Composable {},
+        modifier = Modifier,){
+
+        }
+
     }
 }
