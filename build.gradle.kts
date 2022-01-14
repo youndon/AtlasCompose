@@ -18,6 +18,7 @@ dependencies {
     implementation(compose.runtime)
     implementation(compose.uiTooling)
     implementation(compose.materialIconsExtended)
+    implementation("org.jetbrains.compose.material3:material3:1.0.0")
     implementation("org.jetbrains.kotlin:kotlin-script-runtime:1.6.0")
 }
 
