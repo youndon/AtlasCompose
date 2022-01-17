@@ -2,7 +2,11 @@ package components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.ScrollableDefaults
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.BadgedBox
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -27,6 +31,16 @@ interface `CRB'` {
 
         }
         //
+        LazyColumn(
+            modifier = Modifier,
+            state = rememberLazyListState(),
+            contentPadding = PaddingValues(0.dp),
+            reverseLayout = false,
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.Start,
+            flingBehavior = ScrollableDefaults.flingBehavior(),
+            content = {/*unit*/})
+        //
         Row(
             modifier = Modifier,
             horizontalArrangement = Arrangement.Start,
@@ -35,12 +49,24 @@ interface `CRB'` {
 
         }
         //
+        LazyRow(
+            modifier = Modifier,
+            state = rememberLazyListState(),
+            contentPadding = PaddingValues(0.dp),
+            reverseLayout = false,
+            horizontalArrangement = Arrangement.Start,
+            verticalAlignment = Alignment.Top,
+            flingBehavior = ScrollableDefaults.flingBehavior(),
+            content = {/*unit*/}
+        )
+        //
         Box(
             modifier = Modifier,
             contentAlignment = Alignment.Center,
             propagateMinConstraints = false
         ) {
         }
+
         //
         BoxWithConstraints(
             modifier = Modifier,
