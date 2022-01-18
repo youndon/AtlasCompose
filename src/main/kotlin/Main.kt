@@ -1,31 +1,21 @@
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.gestures.ScrollableDefaults
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.*
-import androidx.compose.material3.MaterialTheme as MT3
-import androidx.compose.material.SnackbarDefaults.backgroundColor
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.rememberNotification
 import androidx.compose.ui.window.singleWindowApplication
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 
 @OptIn(ExperimentalMaterialApi::class)
-fun main() = singleWindowApplication {
-
-    
-
-}
+fun main() = singleWindowApplication { Effect() }
 
 @Composable
 fun Coloring() {
@@ -54,7 +44,6 @@ fun Coloring() {
         }
     }
 }
-
 @Composable
 fun Snaking() {
     var textState by remember { mutableStateOf("") }
@@ -87,4 +76,19 @@ fun Snaking() {
     }
 }
 
-
+@Composable
+fun Effect() {
+    val scaffold = rememberScaffoldState()
+    Scaffold(scaffoldState = scaffold) {
+//        var c by remember { mutableStateOf(0) }
+        val c = produceState(0){ delay(2000) ;value = 11 }
+        if (c.value % 2 == 0 && c.value != 0){
+            LaunchedEffect(scaffold.snackbarHostState) {
+                scaffold.snackbarHostState.showSnackbar("The Count's $c")
+            }
+        }
+        Button({ }){
+            Text("count! ${c.value}")
+        }
+    }
+}

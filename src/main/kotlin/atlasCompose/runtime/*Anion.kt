@@ -33,7 +33,7 @@ private inline fun <T, E,reified R> void() {
     mutableStateListOf<T>()
     mutableStateMapOf<E,T>()
     neverEqualPolicy<T>()
-    produceState(1,null,null) { }
+    produceState(1) { }
     referentialEqualityPolicy<T>()
     rememberCompositionContext()
     rememberCoroutineScope()
