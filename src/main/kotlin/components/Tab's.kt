@@ -2,6 +2,7 @@ package components
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.material.*
+import androidx.compose.material.SnackbarDefaults.backgroundColor
 import androidx.compose.material.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -12,6 +13,7 @@ interface `Tab's` {
     @Composable
     fun tab() {
 
+        //
         TabRow(
             selectedTabIndex = 0,
             modifier = Modifier,
@@ -35,13 +37,37 @@ interface `Tab's` {
                     selectedContentColor = LocalContentColor.current,
                     unselectedContentColor = LocalContentColor.current.copy(alpha = ContentAlpha.medium),
                     content = @Composable {
-                        Text("one")
+                        Text("Tab")
                     }
                 )
-                Tab(true,{}){
-                    Text("tow")
-                }
             }
+        )
+
+        //
+        ScrollableTabRow(
+            selectedTabIndex = 1,
+            modifier = Modifier,
+            backgroundColor = MaterialTheme.colors.primarySurface,
+            contentColor = contentColorFor(backgroundColor),
+            edgePadding = TabRowDefaults.ScrollableTabRowPadding,
+            indicator = @Composable { tabPositions ->
+                TabRowDefaults.Indicator(
+                    Modifier.tabIndicatorOffset(tabPositions[0])
+                )
+            }
+        ) {
+        }
+        //
+        LeadingIconTab(
+            selected = true,
+            onClick = {},
+            text = @Composable {},
+            icon = @Composable {},
+            modifier = Modifier,
+            enabled = true,
+            interactionSource = remember { MutableInteractionSource() },
+            selectedContentColor = LocalContentColor.current,
+            unselectedContentColor = LocalContentColor.current.copy(alpha = ContentAlpha.medium)
         )
     }
 }

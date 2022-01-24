@@ -38,30 +38,7 @@ interface `Field's` {
             maxLines = 200,
             interactionSource = remember { MutableInteractionSource() },
             shape = MaterialTheme.shapes.small.copy(bottomEnd = ZeroCornerSize, bottomStart = ZeroCornerSize),
-            colors = TextFieldDefaults
-                .textFieldColors(
-                    textColor = LocalContentColor.current.copy(LocalContentAlpha.current),
-                    disabledTextColor = LocalContentColor.current.copy(ContentAlpha.disabled),
-                    backgroundColor = MaterialTheme.colors.onSurface.copy(alpha = TextFieldDefaults.BackgroundOpacity),
-                    cursorColor = MaterialTheme.colors.primary,
-                    errorCursorColor = MaterialTheme.colors.error,
-                    focusedIndicatorColor = MaterialTheme.colors.primary.copy(alpha = ContentAlpha.high),
-                    unfocusedIndicatorColor = MaterialTheme.colors.onSurface.copy(alpha = TextFieldDefaults.UnfocusedIndicatorLineOpacity),
-                    disabledIndicatorColor = MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
-                    errorIndicatorColor = MaterialTheme.colors.error,
-                    leadingIconColor = MaterialTheme.colors.onSurface.copy(alpha = TextFieldDefaults.IconOpacity),
-                    disabledLeadingIconColor = MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
-                    errorLeadingIconColor = MaterialTheme.colors.onSurface,
-                    trailingIconColor = MaterialTheme.colors.onSurface.copy(alpha = TextFieldDefaults.IconOpacity),
-                    disabledTrailingIconColor = MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
-                    errorTrailingIconColor = MaterialTheme.colors.error,
-                    focusedLabelColor = MaterialTheme.colors.primary.copy(alpha = ContentAlpha.high),
-                    unfocusedLabelColor = MaterialTheme.colors.onSurface.copy(ContentAlpha.medium),
-                    disabledLabelColor = MaterialTheme.colors.onSurface.copy(ContentAlpha.disabled),
-                    errorLabelColor = MaterialTheme.colors.error,
-                    placeholderColor = MaterialTheme.colors.onSurface.copy(ContentAlpha.medium),
-                    disabledPlaceholderColor = MaterialTheme.colors.onSurface.copy(ContentAlpha.disabled)
-                )
+            colors = TextFieldDefaults.textFieldColors()
         )
         //
         BasicTextField(value = rem.value,

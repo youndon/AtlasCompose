@@ -5,6 +5,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.DefaultAlpha
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.ImageBitmapConfig
+import androidx.compose.ui.graphics.ImageShader
+import androidx.compose.ui.graphics.colorspace.ColorSpaces
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 

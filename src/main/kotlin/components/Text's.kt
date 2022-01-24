@@ -3,6 +3,7 @@ package components
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.*
+import androidx.compose.material.LocalTextStyle
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -15,35 +16,49 @@ import androidx.compose.ui.unit.*
 
 interface `Text's` {
     @Composable fun ts(s:String ) {
-        Column(Modifier.padding(20.dp)) {
+        Column {
             //
             ClickableText(
-                AnnotatedString(s),
-                Modifier
-                    .size(50.dp),
+                text = buildAnnotatedString { },
+                modifier = Modifier,
+                style = TextStyle.Default,
                 softWrap = true,
-                maxLines = 1000,
-                overflow = TextOverflow.Visible,
-                style = myStyle()
-            ) {
-
-            }
-            //
-            Text(text = s,
-                Modifier.fillMaxWidth(),
-                overflow = TextOverflow.Ellipsis,
+                overflow = TextOverflow.Clip,
                 maxLines = Int.MAX_VALUE,
-                onTextLayout = {
-                },
-                style = myStyle(),
-                textAlign = TextAlign.Center
+                onTextLayout = {}
+            ) {
+            }
+
+            //
+            Text(
+                text = "",
+                modifier = Modifier,
+                color = Color.Unspecified,
+                fontSize = TextUnit.Unspecified,
+                fontStyle = null,
+                fontWeight = null,
+                fontFamily = null,
+                letterSpacing = TextUnit.Unspecified,
+                textDecoration = null,
+                textAlign = null,
+                lineHeight = TextUnit.Unspecified,
+                overflow = TextOverflow.Clip,
+                softWrap = true,
+                maxLines = Int.MAX_VALUE,
+                onTextLayout = {},
+                style = LocalTextStyle.current
             )
             //
             BasicText(
-                text = AnnotatedString(s),
-                style = myStyle()
+                text = buildAnnotatedString { },
+                modifier = Modifier,
+                style = TextStyle.Default,
+                onTextLayout = {},
+                overflow = TextOverflow.Clip,
+                softWrap = true,
+                maxLines = Int.MAX_VALUE,
+                inlineContent = mapOf(),
             )
-
         }
     }
     fun myStyle() = TextStyle(

@@ -36,16 +36,8 @@ interface `Card's` {
 Material Design card.
 Cards contain content and actions about a single subject.
 !Cards image 
-This version of Card will block clicks behind it. For clickable card, please use another overload that accepts onClick as a parameter.
-Params:
-modifier - Modifier to be applied to the layout of the card.
-shape - Defines the card's shape as well its shadow. A shadow is only displayed if the elevation is greater than zero.
-backgroundColor - The background color.
-contentColor - The preferred content color provided by this card to its children. Defaults to either the matching content color for backgroundColor, or if backgroundColor is not a color from the theme, this will keep the same value set above this card.
-border - Optional border to draw on top of the card
-elevation - The z-coordinate at which to place this card.
-This controls the size of the shadow below the card.
- Other params is Experimental Material.
+This version of Card will block clicks behind it.
+For clickable card, please use another overload that accepts onClick as a parameter.
             """.trimIndent())
             }
         )

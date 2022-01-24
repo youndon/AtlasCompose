@@ -30,7 +30,6 @@ interface `Button's` {
             ) {
                 Text("NeverLand")
             }
-            Spacer(Modifier.height(10.dp))
             //
             TextButton({
                 println("text button!!")
@@ -53,7 +52,6 @@ interface `Button's` {
             {
                 Text("OutLine!")
             }
-            Spacer(Modifier.height(10.dp))
             //
             IconButton(onClick = {}){
 

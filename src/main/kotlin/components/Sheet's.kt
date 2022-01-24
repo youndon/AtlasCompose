@@ -7,46 +7,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 
-interface `Bottom's` {
+interface `Sheet's` {
     @OptIn(ExperimentalMaterialApi::class)
     @Composable
-    fun bottoms() {
-        //
-        BottomAppBar(
-            modifier = Modifier,
-            backgroundColor = MaterialTheme.colors.primarySurface,
-            contentColor = contentColorFor(backgroundColor),
-            cutoutShape = MaterialTheme.shapes.medium,
-            elevation = AppBarDefaults.BottomAppBarElevation,
-            contentPadding = AppBarDefaults.ContentPadding,
-            content = {
-            }
-        )
+    fun sheet() {
 
-        //
-        BottomDrawer(
-            drawerContent = {},
-            modifier = Modifier,
-            drawerState = rememberBottomDrawerState(BottomDrawerValue.Closed),
-            gesturesEnabled = true,
-            drawerShape = MaterialTheme.shapes.large,
-            drawerElevation = DrawerDefaults.Elevation,
-            drawerBackgroundColor = MaterialTheme.colors.surface,
-            drawerContentColor = contentColorFor(backgroundColor),
-            scrimColor = DrawerDefaults.scrimColor,
-            content = {  }
-        )
-
-        //
-        BottomNavigation(
-            modifier = Modifier,
-            backgroundColor = MaterialTheme.colors.primarySurface,
-            contentColor = contentColorFor(backgroundColor),
-            elevation = BottomNavigationDefaults.Elevation,
-            content = {  }
-        )
-
-        //
         BottomSheetScaffold(
             sheetContent = {},
             modifier = Modifier,
