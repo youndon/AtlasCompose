@@ -13,6 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 
 interface `Field's` {
@@ -28,8 +31,8 @@ interface `Field's` {
             textStyle = LocalTextStyle.current,
             label = { Text("this is text field!") },
             placeholder = { Text("user input.") },
-            leadingIcon = { Icon(Icons.TwoTone.Image,null) },
-            trailingIcon = { Icon(Icons.Rounded.Android,null) },
+            leadingIcon = { Icon(Icons.TwoTone.Image, null) },
+            trailingIcon = { Icon(Icons.Rounded.Android, null) },
             isError = false,
             visualTransformation = VisualTransformation.None, // PasswordVisualTransformation() for password input.
             keyboardOptions = KeyboardOptions.Default,
@@ -41,11 +44,44 @@ interface `Field's` {
             colors = TextFieldDefaults.textFieldColors()
         )
         //
-        BasicTextField(value = rem.value,
-            onValueChange = {rem.value = it},
+        BasicTextField(
+            value = "",
+            onValueChange = {},
+            modifier = Modifier,
+            enabled = true,
+            readOnly = false,
+            textStyle = TextStyle.Default,
+            keyboardOptions = KeyboardOptions.Default,
+            keyboardActions = KeyboardActions.Default,
+            singleLine = false,
+            maxLines = Int.MAX_VALUE,
+            visualTransformation = VisualTransformation.None,
+            onTextLayout = {},
+            interactionSource = remember { MutableInteractionSource() },
+            cursorBrush = SolidColor(Color.Black)
         )
+        @Composable { innerTextField -> innerTextField() }
         //
-        OutlinedTextField("out line field", {})
-
+        OutlinedTextField(
+            value = "",
+            onValueChange = {},
+            modifier = Modifier,
+            enabled = true,
+            readOnly = false,
+            textStyle = LocalTextStyle.current,
+            label = @Composable {},
+            placeholder = @Composable {},
+            leadingIcon = @Composable {},
+            trailingIcon = @Composable {},
+            isError = false,
+            visualTransformation = VisualTransformation.None,
+            keyboardOptions = KeyboardOptions.Default,
+            keyboardActions = KeyboardActions.Default,
+            singleLine = false,
+            maxLines = Int.MAX_VALUE,
+            interactionSource = remember { MutableInteractionSource() },
+            shape = MaterialTheme.shapes.small,
+            colors = TextFieldDefaults.outlinedTextFieldColors()
+        )
     }
 }

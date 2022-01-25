@@ -4,8 +4,10 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material.SnackbarDefaults.backgroundColor
 import androidx.compose.runtime.*
 import androidx.compose.ui.*
 import androidx.compose.ui.draw.clip
@@ -17,9 +19,8 @@ interface `Button's` {
         Column {
             //
             Button(
-                onClick = {
-
-                }, Modifier.clip(CircleShape),
+                onClick = { },
+                modifier = Modifier.clip(CircleShape),
                 enabled = true,
                 interactionSource = remember { MutableInteractionSource() },
                 elevation = null,
@@ -31,47 +32,80 @@ interface `Button's` {
                 Text("NeverLand")
             }
             //
-            TextButton({
-                println("text button!!")
-            },
-                colors = ButtonDefaults.buttonColors(Color.White, Color.Gray),
-            ){
-                Text("Live Each day as It Your Last.") }
-            //
-            RadioButton(onClick = {
-
-            },modifier = Modifier,
+            TextButton(
+                onClick = {},
+                modifier = Modifier,
+                enabled = true,
                 interactionSource = remember { MutableInteractionSource() },
+                elevation = null,
+                shape = MaterialTheme.shapes.small,
+                border = null,
+                colors = ButtonDefaults.textButtonColors(),
+                contentPadding = ButtonDefaults.TextButtonContentPadding,
+            ) {
+                Text("Live Each day as It Your Last.")
+            }
+            //
+            RadioButton(
                 selected = true,
-                colors = RadioButtonDefaults.colors(Color.White,Color.Blue),
+                onClick = { },
+                modifier = Modifier,
+                enabled = true,
+                interactionSource = remember { MutableInteractionSource() },
+                colors = RadioButtonDefaults.colors(Color.White, Color.Blue),
             )
             //
-            OutlinedButton({},modifier = Modifier,
+            OutlinedButton(
+                {}, modifier = Modifier,
                 colors = ButtonDefaults.buttonColors(Color.DarkGray, Color.LightGray),
-                contentPadding = ButtonDefaults.ContentPadding)
+                contentPadding = ButtonDefaults.ContentPadding
+            )
             {
                 Text("OutLine!")
             }
             //
-            IconButton(onClick = {}){
+            IconButton(
+                onClick = {},
+                modifier = Modifier,
+                enabled = true,
+                interactionSource = remember { MutableInteractionSource() },
+            ) {
 
             }
             //
             IconToggleButton(
                 checked = true,
-                onCheckedChange = {},
-                Modifier,){
-                Text("toggle")
+                onCheckedChange = { },
+                modifier = Modifier,
+                enabled = true,
+                interactionSource = remember { MutableInteractionSource() }
+            ) {
+
             }
             //
-            FloatingActionButton({
-
-            }){
+            FloatingActionButton(
+                onClick = {},
+                modifier = Modifier,
+                interactionSource = remember { MutableInteractionSource() },
+                shape = MaterialTheme.shapes.small.copy(CornerSize(percent = 50)),
+                backgroundColor = MaterialTheme.colors.secondary,
+                contentColor = contentColorFor(backgroundColor),
+                elevation = FloatingActionButtonDefaults.elevation()
+            ) {
                 Text("+")
             }
             //
-            ExtendedFloatingActionButton({},{})
+            ExtendedFloatingActionButton(
+                text = @Composable {},
+                onClick = {},
+                modifier = Modifier,
+                icon = @Composable {},
+                interactionSource = remember { MutableInteractionSource() },
+                shape = MaterialTheme.shapes.small.copy(CornerSize(percent = 50)),
+                backgroundColor = MaterialTheme.colors.secondary,
+                contentColor = contentColorFor(backgroundColor),
+                elevation = FloatingActionButtonDefaults.elevation()
+            )
         }
     }
-
 }

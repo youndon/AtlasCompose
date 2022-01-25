@@ -15,6 +15,7 @@ interface `Slider's` {
     @Composable
     fun slider() {
         Column {
+            //
             Slider(
                 value = 0.1f,
                 onValueChange = { },
@@ -26,6 +27,7 @@ interface `Slider's` {
                 interactionSource = remember { MutableInteractionSource() },
                 colors = SliderDefaults.colors()
             )
+            //
             RangeSlider(
                 values = 0f..0.2f,
                 onValueChange = {},

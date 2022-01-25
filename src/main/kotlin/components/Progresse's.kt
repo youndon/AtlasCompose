@@ -11,11 +11,13 @@ interface `Progresse's` {
     @Composable
     fun progresses() {
         CircularProgressIndicator(
+            progress = 1f,
             modifier = Modifier,
             color = MaterialTheme.colors.primary,
             strokeWidth = ProgressIndicatorDefaults.StrokeWidth
         )
         LinearProgressIndicator(
+            progress = 1f,
             modifier = Modifier,
             color = MaterialTheme.colors.primary,
             backgroundColor = MaterialTheme.colors.primary.copy(alpha = IndicatorBackgroundOpacity)

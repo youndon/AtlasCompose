@@ -28,7 +28,6 @@ interface `Text's` {
                 onTextLayout = {}
             ) {
             }
-
             //
             Text(
                 text = "",

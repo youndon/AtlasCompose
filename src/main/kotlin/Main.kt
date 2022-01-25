@@ -29,10 +29,7 @@ import kotlin.random.Random
 
 
 @OptIn(ExperimentalMaterialApi::class)
-fun main() = singleWindowApplication {
-    land()
-
-}
+fun main() = singleWindowApplication {}
 
 @Composable
 fun Coloring() {
@@ -135,18 +132,3 @@ fun Animate() {
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-fun land() {
-
-    LazyVerticalGrid(
-        cells = GridCells.Fixed(1),
-        modifier = Modifier,
-    state = rememberLazyListState(),
-    contentPadding = PaddingValues(0.dp),
-    verticalArrangement = Arrangement.Top,
-    horizontalArrangement = Arrangement.Start,
-    ){
-
-    }
-}

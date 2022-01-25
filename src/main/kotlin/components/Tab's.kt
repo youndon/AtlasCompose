@@ -12,7 +12,6 @@ interface `Tab's` {
     @OptIn(ExperimentalMaterialApi::class)
     @Composable
     fun tab() {
-
         //
         TabRow(
             selectedTabIndex = 0,
@@ -42,7 +41,6 @@ interface `Tab's` {
                 )
             }
         )
-
         //
         ScrollableTabRow(
             selectedTabIndex = 1,
