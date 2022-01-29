@@ -17,15 +17,6 @@ interface `AppBar's` {
             cutoutShape = null,
             elevation = AppBarDefaults.BottomAppBarElevation,
             contentPadding = AppBarDefaults.ContentPadding,
-        ) {  }
-        //
-        BottomAppBar(
-            modifier = Modifier,
-            backgroundColor = MaterialTheme.colors.primarySurface,
-            contentColor = contentColorFor(SnackbarDefaults.backgroundColor),
-            cutoutShape = null,
-            elevation = AppBarDefaults.BottomAppBarElevation,
-            contentPadding = AppBarDefaults.ContentPadding,
         ){}
         //
         SmallTopAppBar(

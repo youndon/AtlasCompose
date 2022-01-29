@@ -19,6 +19,8 @@ dependencies {
     implementation(compose.uiTooling)
     implementation(compose.materialIconsExtended)
     implementation("org.jetbrains.kotlin:kotlin-script-runtime:1.6.0")
+    @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+    implementation(compose.material3)
 }
 
 tasks.withType<KotlinCompile>() {

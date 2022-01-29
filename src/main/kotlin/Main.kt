@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -16,7 +17,10 @@ import kotlin.random.Random
 
 
 @OptIn(ExperimentalMaterialApi::class)
-fun main() = singleWindowApplication {}
+fun main() = singleWindowApplication {
+
+
+}
 
 @Composable
 fun Coloring() {
@@ -77,7 +81,8 @@ fun Snaking() {
     }
 }
 @Composable
-fun Effect() {    val scaffold = rememberScaffoldState()
+fun Effect() {
+    val scaffold = rememberScaffoldState()
     Scaffold(scaffoldState = scaffold) {
 //        var c by remember { mutableStateOf(0) }
         val c = produceState(0){ delay(2000) ;value = 11 }
